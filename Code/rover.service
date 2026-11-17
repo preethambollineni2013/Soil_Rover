@@ -1,0 +1,14 @@
+[Unit]
+Description=Soil rover dashboard
+After=network-online.target pigpiod.service
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/home/pi/soil_rover
+ExecStart=/usr/bin/python3 server.py --port 8000
+Environment=ROVER_TOKEN=change-me
+Restart=on-failure
+User=pi
+
+[Install]
+WantedBy=multi-user.target
