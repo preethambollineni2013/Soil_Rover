@@ -21,7 +21,7 @@ I hope this rover help many poor farmers without knowing soil type and place wit
 
 <img src="images/soil_rover_schematic.jpg">
 
-##Chassis
+## Chassis
 
 <img src="images/soil_rover_chassis.png">
 
