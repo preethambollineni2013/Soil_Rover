@@ -17,7 +17,7 @@ I hope this rover help many poor farmers without knowing soil type and place wit
 | GPS NEO-6M TX | 23 (bit-bang serial) |
 | AS7341, MLX90640 | I2C 2/3 |
 
-<img src="images/soil_rover_schematic.png">
+<img src="images/soil_rover_schematic.jpg">
 
 
 ## How it decides
