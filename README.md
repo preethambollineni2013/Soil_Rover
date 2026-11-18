@@ -27,10 +27,31 @@ I hope this rover help many poor farmers without knowing soil type and place wit
 
 
 ## How it decides
-* **Texture:** By Using Laser.
+* **Texture:** laser-on minus laser-off picture finds the line; how much it wobbles (mm) gives smooth / medium / coarse.
 * **Colour:** dark = black soil, red-brown = red soil, light and coarse = sandy, dark and smooth = clay, otherwise loam.
-* **Crops:** 
-* **Water spots:** By Using Thermal Camera
+* **Crops:** each crop is scored on pH fit, soil fit, nutrient levels and soil temperature.
+* **Water spots:** By Using Thermal Camera and ranked by probe moisture, plus a bonus for ground cooler than the average of your samples.
+
+## Parts Used
+
+Pi Zero 2 WH
+32GB microSD
+Pi Zero camera cable
+5V 3A buck converter
+3× 18650 cells
+3S 20A BMS + holders
+3S charger
+4× N20 12V motors with encoders
+Wheels and mounts
+2× TB6612FNG drivers
+Pi Camera Module 3
+Laser line module (1 mW, Class2)
+AS7341 spectral sensor
+RS485 soil sensor (NPK, pH, EC, moisture)
+MAX485 module
+Mini linear actuator + driver
+MLX90640 thermal camera
+NEO-6M GPS
 
 ## Safety and limits
 * The drive refuses to move while a job runs or the probe is not fully up.
