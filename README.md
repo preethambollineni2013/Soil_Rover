@@ -5,6 +5,8 @@ An Rover for Soil. It uses Laser and camera to detect soil type and structure an
 
 I hope this rover help many poor farmers without knowing soil type and place with more water. This is powered by Raspberry Pi as micro controller and transmitts data through Wifi to users mobile phone.
 
+<img src="images/soil_rover_flowchart.png">
+
 ## Connections
 | Function | Pins |
 |---|---|
@@ -19,6 +21,10 @@ I hope this rover help many poor farmers without knowing soil type and place wit
 
 <img src="images/soil_rover_schematic.jpg">
 
+##Chassis
+
+<img src="images/soil_rover_chassis.png">
+
 
 ## How it decides
 * **Texture:** By Using Laser.
@@ -30,3 +36,4 @@ I hope this rover help many poor farmers without knowing soil type and place wit
 * The drive refuses to move while a job runs or the probe is not fully up.
 * Motors stop if the phone stops sending commands for 0.6 s.
 * The Values taken are just test values not real ones 
+
