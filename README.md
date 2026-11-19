@@ -53,6 +53,17 @@ I hope this rover help many poor farmers without knowing soil type and place wit
 * MLX90640 thermal camera
 * NEO-6M GPS
 
+
+## Flashing Code
+* Flash the Pi's OS. On a computer, install Raspberry Pi Imager and choose Raspberry Pi OS Lite (64-bit). Before writing, open its settings and set a hostname (for example soilrover), a username and password, your 2.4 GHz WiFi, and turn on SSH. Write it to a 32 GB microSD card.
+* Boot the Pi. Put the card in, power it on, wait about 2 minutes, then connect from your computer: ssh youruser@soilrover.local.
+* Copy the code. On your computer, put all the code files in one folder called soil_rover, with test_core.py inside a tests folder. Then run scp -r soil_rover youruser@soilrover.local:~/.
+* Install. On the Pi, run cd soil_rover then sh install.sh.Turn the serial console off in sudo raspi-config, and reboot.
+* Test with no hardware. Run python3 server.py --sim, then open http://soilrover.local:8000 on your phone.
+* Run it for real. Run python3 server.py once the parts are connected.
+* Start it automatically at power-on. In rover.service, change the username and folder path to match yours. Then run sudo cp rover.service /etc/systemd/system/ followed by sudo systemctl enable --now rover.
+
+
 ## Safety and limits
 * The drive refuses to move while a job runs or the probe is not fully up.
 * Motors stop if the phone stops sending commands for 0.6 s.
