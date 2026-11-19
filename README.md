@@ -54,7 +54,7 @@ I hope this rover help many poor farmers without knowing soil type and place wit
 * NEO-6M GPS
 
 
-## Flashing Code
+## Flashing Code and testing
 * Flash the Pi's OS. On a computer, install Raspberry Pi Imager and choose Raspberry Pi OS Lite (64-bit). Before writing, open its settings and set a hostname (for example soilrover), a username and password, your 2.4 GHz WiFi, and turn on SSH. Write it to a 32 GB microSD card.
 * Boot the Pi. Put the card in, power it on, wait about 2 minutes, then connect from your computer: ssh youruser@soilrover.local.
 * Copy the code. On your computer, put all the code files in one folder called soil_rover, with test_core.py inside a tests folder. Then run scp -r soil_rover youruser@soilrover.local:~/.
